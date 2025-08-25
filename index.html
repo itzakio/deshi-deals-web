@@ -1,12 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>Deshi Deals</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body class="work-sans-font bg-gray-50">
+    <!-- Header section start -->
+    <header class="bg-linear-to-t from-pink-100 to-pink-50">
+      <!-- Navbar section start -->
+      <nav class="flex justify-center gap-3 p-4 shadow">
+        <img class="w-20" src="./assets/logo.png" alt="brand logo" />
+        <div>
+          <h2 class="text-5xl text-pink-500">
+            Deshi <span class="font-bold">Deals</span>
+          </h2>
+          <p class="text-xl text-gray-500">Cheap Price , Best Quality</p>
+        </div>
+      </nav>
+      <!-- Navbar section end -->
+
+      <!--Banner section start -->
+      <section id="banner" class="mt-18 bg-pink-100">
+        <h1 class="text-5xl font-bold text-center">
+          Purchase TK 200 or above & get <br />
+          <span class="text-pink-500">20% off</span>
+        </h1>
+
+        <div class="flex justify-center gap-3 mt-10">
+          <button class="btn btn-soft w-40">Use Promo Code</button>
+          <button class="btn btn-secondary w-36">SELL200</button>
+        </div>
+        <img
+          class="mx-auto w-1/2 relative -bottom-22"
+          src="./assets/hero-bg.png"
+          alt="banner image"
+        />
+      </section>
+      <!-- Banner section end -->
+    </header>
+    <!-- Header section end -->
+    <!-- Main section start -->
+    <main class="mt-48 w-10/12 mx-auto grid grid-cols-4">
+      <section id="all-products" class="col-span-3">
+        <!-- Kitchenware start -->
+        <div  class="product-container mb-14">
+          <h2 class="text-4xl font-semibold mb-8">Kitchenware</h2>
+          <div class="products grid grid-cols-3">
+            <!-- product 1 -->
+            <div id="card-1"
+              class="product-card w-72 p-5 flex flex-col justify-center items-center gap-1 rounded-xl shadow-lg bg-white"
+            >
+              <div class="py-7 bg-gray-300 w-full rounded-xl mb-3">
+                <img
+                  id="product-img"
+                  class="mx-auto"
+                  src="./assets/kitchen-1.png"
+                  alt=""
+                />
+              </div>
+              <p>⭐⭐⭐⭐⭐</p>
+              <h3 id="product-title" class="text-xl font-semibold">
+                Spoon set
+              </h3>
+              <p><span>150.20</span>TK</p>
+              <button class="card-btn btn btn-secondary w-full mt-2">Add to Cart</button>
+            </div>
+            <!-- product 2 -->
+            <div
+              class="product-card w-72 p-5 flex flex-col justify-center items-center gap-1 rounded-xl shadow-lg bg-white"
+            >
+              <div class="py-7 bg-gray-300 w-full rounded-xl mb-3">
+                <img
+                  id="product-img"
+                  class="mx-auto"
+                  src="./assets/kitchen-2.png"
+                  alt=""
+                />
+              </div>
+              <p>⭐⭐⭐⭐⭐</p>
+              <h3 id="product-title" class="text-xl font-semibold">
+                Spoon set
+              </h3>
+              <p><span class="price">350.50</span>TK</p>
+              <button class="card-btn btn btn-secondary w-full mt-2">Add to Cart</button>
+            </div>
+            <!-- product 3 -->
+            <div
+              class="product-card w-72 p-5 flex flex-col justify-center items-center gap-1 rounded-xl shadow-lg bg-white"
+            >
+              <div class="py-7 bg-gray-300 w-full rounded-xl mb-3">
+                <img
+                  id="product-img"
+                  class="mx-auto"
+                  src="./assets/kitchen-3.png"
+                  alt=""
+                />
+              </div>
+              <p>⭐⭐⭐⭐⭐</p>
+              <h3 id="product-title" class="text-xl font-semibold">
+                Spoon set
+              </h3>
+              <p><span class="price">500.50</span>TK</p>
+              <button class="card-btn btn btn-secondary w-full mt-2">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <!-- Kitchenware end -->
+
+        <!-- Sportswear section start -->
+        <div  class="product-container mb-14">
+          <h2 class="text-4xl font-semibold mb-8">Sportswear</h2>
+          <div class="products grid grid-cols-3">
+            <!-- product 1 -->
+            <div id="card-1"
+              class="product-card w-72 p-5 flex flex-col justify-center items-center gap-1 rounded-xl shadow-lg bg-white"
+            >
+              <div class="py-7 bg-gray-300 w-full rounded-xl mb-3">
+                <img
+                  id="product-img"
+                  class="mx-auto"
+                  src="./assets/sports-1.png"
+                  alt=""
+                />
+              </div>
+              <p>⭐⭐⭐⭐⭐</p>
+              <h3 id="product-title" class="text-xl font-semibold">
+                Cap
+              </h3>
+              <p><span>180.75</span>TK</p>
+              <button class="card-btn btn btn-secondary w-full mt-2">Add to Cart</button>
+            </div>
+            <!-- product 2 -->
+            <div
+              class="product-card w-72 p-5 flex flex-col justify-center items-center gap-1 rounded-xl shadow-lg bg-white"
+            >
+              <div class="py-7 bg-gray-300 w-full rounded-xl mb-3">
+                <img
+                  id="product-img"
+                  class="mx-auto"
+                  src="./assets/sports-2.png"
+                  alt=""
+                />
+              </div>
+              <p>⭐⭐⭐⭐⭐</p>
+              <h3 id="product-title" class="text-xl font-semibold">
+                Swim suit
+              </h3>
+              <p><span class="price">1200.50</span>TK</p>
+              <button class="card-btn btn btn-secondary w-full mt-2">Add to Cart</button>
+            </div>
+            <!-- product 3 -->
+            <div
+              class="product-card w-72 p-5 flex flex-col justify-center items-center gap-1 rounded-xl shadow-lg bg-white"
+            >
+              <div class="py-7 bg-gray-300 w-full rounded-xl mb-3">
+                <img
+                  id="product-img"
+                  class="mx-auto"
+                  src="./assets/sports-3.png"
+                  alt=""
+                />
+              </div>
+              <p>⭐⭐⭐⭐⭐</p>
+              <h3 id="product-title" class="text-xl font-semibold">
+                Sport Shoes
+              </h3>
+              <p><span class="price">1000</span>TK</p>
+              <button class="card-btn btn btn-secondary w-full mt-2">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <!-- Sportswear section end -->
+      </section>
+      <aside>
+        <!-- your cart start-->
+        <div class="py-6 px-7 rounded-xl mt-[68px] shadow-lg bg-white">
+          <h2 class="text-3xl font-semibold flex gap-2">
+            Your Cart <img class="w-8" src="./assets/trolley.png" alt="" />
+          </h2>
+          <h3 class="text-xl font-medium py-4">Have coupon?</h3>
+          <div class="join">
+            <div>
+              <label class="input validator join-item">
+                <input type="email" placeholder="Coupon code" required />
+              </label>
+              <div class="validator-hint hidden">Enter valid email address</div>
+            </div>
+            <button class=" btn btn-secondary join-item">Apply</button>
+          </div>
+        </div>
+        <!-- your cart end -->
+
+        <!-- cart product start -->
+        <div class="max-h-[350px] overflow-auto py-6 px-7 rounded-xl mt-5 bg-white space-y-2 shadow-lg">
+          <div class="flex justify-between items-center ">
+            <h3 class="text-xl font-medium">Your Products:</h3>
+            <button id="clear-all" class="btn btn-secondary mt-2">Clear All</button>
+          </div>
+          <div id="cart-container" class="space-y-2">
+            <!-- html input from js -->
+          </div>
+           
+        </div>
+        <!-- cart product end -->
+        <!-- make purchase start -->
+        <div class="py-6 px-7 rounded-xl mt-5 shadow-lg bg-white">
+          <h3 class="text-xl font-medium">Total Price: <span id="total-price">0</span> TK</h3>
+          <h3 class="text-xl font-medium">Discount: <span id="discount">0</span> TK</h3>
+          <h3 class="text-xl font-medium">Total: <span id="total">0</span> TK</h3>
+          <button class="btn btn-secondary w-full mt-2">Make Purchase</button>
+        </div>
+        
+        <!-- make purchase end -->
+      </aside>
+    </main>
+    <!-- Main section end -->
+    <!-- Footer section start -->
+    <footer></footer>
+    <!-- Footer section end -->
+     <script src="./js/script.js"></script>
+  </body>
 </html>
