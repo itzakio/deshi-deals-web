@@ -20,7 +20,7 @@ document.getElementById("all-products")
         // total calculate
         const currentTotal = Number(totalPrice) + Number(productPrice);
 
-        // totalupdate
+        // total update
         getelement("total-price").innerText = currentTotal.toFixed(2);
         getelement("total").innerText = currentTotal.toFixed(2);
         
@@ -31,13 +31,21 @@ document.getElementById("all-products")
         const div = document.createElement("div");
 
         div.innerHTML = `
-         <div
-              class="flex justify-between items-center h-20 px-3 bg-gray-300 rounded-xl"
+        
+
+
+            <div id="cart-item"
+              class="flex justify-between items-center h-20 pl-3 bg-gray-300 rounded-xl"
             >
               <img class="w-16" src="${productImg}" alt="" />
-              <div>
-                <h3 class="text-xl font-semibold">${productTitle}</h3>
+              <div class="flex  items-center">
+                <div>
+                  <h3 class="text-xl font-semibold">${productTitle}</h3>
                 <p class="text-gray-600"><span>${productPrice}</span> TK</p>
+                </div>
+                <div>
+                  <div  class=" delete-item flex justify-center items-center ml-2 h-20 rounded-r-xl bg-red-500 text-white font-extrabold px-2"> X </div>
+                </div>
               </div>
             </div>
         `
@@ -45,6 +53,8 @@ document.getElementById("all-products")
 
     }
 })
+
+// cart all clear
 
 document.getElementById("clear-all")
 .addEventListener("click", function(){
@@ -55,11 +65,25 @@ document.getElementById("clear-all")
 })
 
 
-// const allBtn = document.getElementsByClassName("card-btn");
+// cart item delete
 
-// for(const btn of allBtn){
-//     btn.addEventListener("click", function(){
-//         const productImg = btn.parentNode.childNodes[1].childNodes[1].src;
-//         console.log(productImg);
-//     })
-// }
+document.getElementById("cart-container")
+.addEventListener("click", function(e){
+    const itemfordelete = e.target;
+    const deleteItem = e.target.className.includes("delete-item")
+    if(deleteItem === true){
+     const item = itemfordelete.parentNode.parentNode.parentNode.style.display = "none"
+     const itemPrice = itemfordelete.parentNode.parentNode.childNodes[1].childNodes[3].childNodes[0].innerText
+
+    //  update total price
+     const totalPrice = getelement("total-price").innerText;
+     const newTotalPrice = Number(totalPrice) - Number(itemPrice)
+     getelement("total-price").innerText = newTotalPrice.toFixed(2);
+     getelement("total").innerText = getelement("total-price").innerText.toFixed(2)
+     console.log(totalPrice)
+     
+
+    }
+})
+
+
