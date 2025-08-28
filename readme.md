@@ -18,7 +18,7 @@ const el = document.getElementById("container");
 console.log("el");
 ```
 
--**getElementsByClassName:** This element selector select one or multiple element with the matching Class Name. It returns live HTMLCollection. If DOM changes like adding or removing the elements. The elements updates automatically.
+- **getElementsByClassName:** This element selector select one or multiple element with the matching Class Name. It returns live HTMLCollection. If DOM changes like adding or removing the elements. The elements updates automatically.
 
 **Example:**
 ```html
@@ -33,7 +33,7 @@ const elements = document.getElementsByClassName("box");
 console.log("elements");
 ```
 
-**querySelector:** This element selector select one element with the matching css selector. It will select only first element with the matching css selector. If no element found on that css selector, it will return null.
+- **querySelector:** This element selector select one element with the matching css selector. It will select only first element with the matching css selector. If no element found on that css selector, it will return null.
 
 **Example:**
 ```html
@@ -48,7 +48,7 @@ const el = document.getElementById("#box-1");
 console.log("el");
 ```
 
-**querySelectorAll:** This element selector select one or multiple element with the matching css selector. It returns NodeList of matching css selector. NodeList is an array like object, So we can loop through the NodeList.
+- **querySelectorAll:** This element selector select one or multiple element with the matching css selector. It returns NodeList of matching css selector. NodeList is an array like object, So we can loop through the NodeList.
 
 **Example:**
 
@@ -70,7 +70,7 @@ console.log("elements");
 
 **Answer:** The steps to create and insert a new element into the DOM:
 
-**Step-1:** Get the parent container from the DOM, Where the child container will be inserted.
+- **Step-1:** Get the parent container from the DOM, Where the child container will be inserted.
 **Example:**
 ```html
 <div id ="parent-container">
@@ -81,19 +81,19 @@ console.log("elements");
 const parentContainer = document.getElementById("parent-container");
 ```
 
-**Step-2:** Create a child container to set the inner HTML:
+- **Step-2:** Create a child container to set the inner HTML:
 Example: 
 ```javascript
 const childContainer = document.createElement("div");
 ```
 
-**Step-3:** Set the inner HTML:
+- **Step-3:** Set the inner HTML:
 Example: 
 ```javascript
 childContainer.innerHTML = `<h1> Helle Programming Hero </h1>`
 ```
 
-**Step-4:** Append the child container into parent container:
+- **Step-4:** Append the child container into parent container:
 Example: 
 ```javascript
 parentContainer.appendChild(childContainer);
@@ -141,7 +141,8 @@ Parent Container Clicked
 
 ### 4. What is **Event Delegation** in JavaScript? Why is it useful?
 
-**Answer:** Event Delegation is a technique used to triggered event by using DOM Event Bubbling features. In this technique the EventListener set only in the parent element. And for the bubbling feature parent element can identify witch element is triggering the event by the help of DOM element selectors.
+**Answer:** 
+**Event Delegation:** Event Delegation is a technique used to triggered event by using DOM Event Bubbling features. In this technique the EventListener set only in the parent element. And for the bubbling feature parent element can identify witch element is triggering the event by the help of DOM element selectors.
 
 **Example:**
 ```html
@@ -187,12 +188,17 @@ Card - 2 is clicked
 
 If you clicked on card-3 button. It will not show any output. Because it don't includes the classname **btn**.
 
+- **The reason why is Event Delegation useful:**
+1. Performance: In Event Delegation we can use only one EventListener to the parent and can handel hundreds of child element event. The code is less so it takes less memory and load faster.
+2. Dynamic Content: If a new child added with the same class or id name also works. No need to right code for new child.
+3. Cleaner Code: The code is less, so it looks clean and easy to maintain.
+
 ---
 
 ### 5. What is the difference between **preventDefault() and stopPropagation()** methods?
 
 **Answer:**
-**preventDefault():** Stops the default action of an element from happening like stops a link < a> from navigating, stops a form from submitting and stops right-click from opening context menu.
+- **preventDefault():** Stops the default action of an element from happening like stops a link < a> from navigating, stops a form from submitting and stops right-click from opening context menu.
 
 **Example:**
 ```html
@@ -211,7 +217,7 @@ document.getElementById("btn").addEventListener("click", function(e){
 
 The default behavior form is if their any button inside the form and it clicked, form reload the page. The **preventDefault()** stop that behavior of form.
 
-**stopPropagation():** Stops the event from bubbling from the target element to their parent. If you use the **stopPropagation()** to the child element EventListener the parent can't hear the bubbling.
+- **stopPropagation():** Stops the event from bubbling from the target element to their parent. If you use the **stopPropagation()** to the child element EventListener the parent can't hear the bubbling.
 
 **Example:**
 ```html
