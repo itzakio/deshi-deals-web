@@ -4,7 +4,7 @@
 
 **Answer:** These three are DOM element selector. The purpose is same, but there are some major difference.
 
-**getElementById:** This element selector select one element with the matching ID. Each id should be unique on the page or it will select only first element with the matching ID. If no element found on that ID, it will return null.
+- **getElementById:** This element selector select one element with the matching ID. Each id should be unique on the page or it will select only first element with the matching ID. If no element found on that ID, it will return null.
 
 **Example:**
 ```html
@@ -18,7 +18,7 @@ const el = document.getElementById("container");
 console.log("el");
 ```
 
-**getElementsByClassName:** This element selector select one or multiple element with the matching Class Name. It returns live HTMLCollection. If DOM changes like adding or removing the elements. The elements updates automatically.
+-**getElementsByClassName:** This element selector select one or multiple element with the matching Class Name. It returns live HTMLCollection. If DOM changes like adding or removing the elements. The elements updates automatically.
 
 **Example:**
 ```html
@@ -170,7 +170,7 @@ Parent Container Clicked
 document.getElementById("card-container").addEventListener("click", function(e) {
       // get the card title
       const cardTitle = e.target.parentNode.childNodes[1].innerText;
-      
+
       // get the element witch one you clicked for triggered the event
       const cardBtn = e.target.className.includes("btn");
 
